@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Inter", sans-serif;
+  --font-arabic: "Amiri", serif;
+  
+  --color-primary: #2563eb;
+  --color-primary-dark: #1e40af;
+  --color-primary-light: #dbeafe;
+  --color-accent: #3b82f6;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 font-sans antialiased selection:bg-primary/20;
+}
+
+.font-display {
+  @apply font-display;
+}
+
+.serif {
+  @apply font-display;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-300;
+}
+
+/* Mobile PWA Optimizations */
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+}
